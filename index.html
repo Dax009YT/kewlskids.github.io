@@ -14,7 +14,7 @@
 <body>also, turn off ur adblocker it stops the IP detection >:( (yes, im serious, look in the page's source code)</body><br><br>
 <script type="text/javascript">
 function doxopen() {
-$.getJSON('https://api.ipify.org/?format=json', function(data) {
+$.getJSON('https://jsonip.com', function(data) {
   ip = data.ip;
   console.log(ip);
   window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
