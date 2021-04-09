@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /skype
+Disallow: /games
+
+Sitemap: https://doxmyself.cf/robots.txt
