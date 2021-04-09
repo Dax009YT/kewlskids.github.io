@@ -14,12 +14,19 @@
 z<font size="5" face="Comic Sans MS" color="red">Dox yourself on Twitter with one easy click!</font><br><br>
 <body>also, turn off ur adblocker it stops the IP detection >:( (yes, im serious, look in the page's source code)</body><br><br>
 <script type="text/javascript">
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+  
 function doxopen() {
-$.getJSON('https://api.myip.com', function(data) {
-  ip = data.ip;
-  console.log(ip);
-  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
-});
+  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+httpGetAsync("https://whatismyip.host/ip4");+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
 }
 </script>
 <button onclick="doxopen()">Dox Myself via Twitter</button><br><br>
