@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <center>
 <meta property="og:description" content="Ruin your privacy by leaking your own IP!">
 <meta property="og:type" content="website">
@@ -13,12 +14,12 @@
 <font size="5" face="Comic Sans MS" color="red">Dox yourself on Twitter with one easy click!</font><br><br>
 <body>also, turn off ur adblocker it stops the IP detection >:( (yes, im serious, look in the page's source code)</body><br><br>
 <script type="text/javascript">
-function doxopen() {
 $.getJSON('https://api.ipify.org/?format=json', function(data) {
   ip = data.ip;
   console.log(ip);
-  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
 });
+function doxopen() {
+window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
 }
 </script>
 <button onclick="doxopen()">Dox Myself via Twitter</button><br><br>
