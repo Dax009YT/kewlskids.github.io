@@ -23,10 +23,10 @@ function httpGetAsync(theUrl, callback)
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
-}
+};
   
 function doxopen() {
-  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+httpGetAsync("https://whatismyip.host/ip4");+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
+  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+httpGetAsync("https://whatismyip.host/ip4")+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
 }
 </script>
 <button onclick="doxopen()">Dox Myself via Twitter</button><br><br>
