@@ -60,9 +60,11 @@ if (prompted == true) {
   break
 }
 } 
+} 
 else {
   // let them make a mistake without confirmation
   window.location.href = "mailto:?body=Hello%2C%20friend%21%0AMy%20IP%20is%20"+ip+"%21%20Send%20me%20yours%20too%21%0Ahttps%3A%2F%2Fdoxmyself.cf&subject=My IP address!";
+}
 }
 }
 function doxopenreddit() {
@@ -74,6 +76,7 @@ if (prompted == true) {
   document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
 } else {
   break
+}
 }
 } 
 else {
