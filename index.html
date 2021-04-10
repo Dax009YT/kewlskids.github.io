@@ -4,25 +4,35 @@
 <meta property="og:description" content="Ruin your privacy by leaking your own IP!">
 <meta property="og:type" content="website">
 <meta name="description" content="Ruin your privacy by leaking your own IP!">
-<meta property="og:title" content="doxmyself.cf by Dax009 | Dox yourself on Twitter with a couple clicks">
+<meta property="og:title" content="doxmyself.cf by Dax009 | Dox yourself with a couple clicks!">
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="https://apis.google.com/js/platform.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Dox urself on Twitter with a couple clicks</title>
 <body>
 <br>
-<font size="5" face="Comic Sans MS" color="red">Dox yourself on Twitter with one easy click!</font><br><br>
+<font size="5" face="Comic Sans MS" color="red">Dox yourself publicly with a couple easy clicks!</font><br><br>
 <body>also, turn off ur adblocker it stops the IP detection >:( (yes, im serious, look in the page's source code)</body><br><br>
 <script type="text/javascript">
 $.getJSON('https://api.ipify.org/?format=json', function(data) {
   ip = data.ip;
   console.log(ip);
 });
-function doxopen() {
+function doxopentwt() {
 window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
 }
+function doxopenemail() {
+var mail = document.createElement("a");
+mail.href = "mailto:?body=Hello%2C%20friend%21%0AMy%20IP%20is%20"+ip+"%20%21%20Send%20me%20yours%20too%21%0Ahttps%3A%2F%2Fdoxmyself.cf&subject=My+IP+address%21";
+mail.click();
+}
+function doxopenreddit() {
+window.open("https://www.reddit.com/submit?title=My IP address! via doxmyself.cf&text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F%20https%3A%2F%2Fdoxmyself.cf", "_blank");
+}
 </script>
-<button onclick="doxopen()">Dox Myself via Twitter</button><br><br>
+<button onclick="doxopentwt()">Dox Myself via Twitter</button><br><br>
+<button onclick="doxopenreddit()">Dox Myself via Reddit</button><br><br>
+<button onclick="doxopenemail()">Dox Myself via Email</button><br><br>
 <body>WARNING, THIS IS AT YOUR OWN RISK. AFTER YOU PRESS THE BUTTON, YOU ARE RESPONSIBLE FOR WHAT YOU TWEET</body>
 <br><body>also we use cookies for some stuff</body><br><br>
 <a href="https://github.com/kewlskids/kewlskids.github.io/">Terrible Code via Github </a><br><a href="https://legitdax009.github.io">Terrible Owner's Website</a><br><br>
