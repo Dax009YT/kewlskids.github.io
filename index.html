@@ -14,18 +14,72 @@
   gtag('config', 'G-Z0DNKB7ZMG');
 </script>
 <script type="text/javascript">
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 $.getJSON('https://api.ipify.org/?format=json', function(data) {
   ip = data.ip;
   console.log(ip);
 });
 function doxopentwt() {
-window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
+var cookie = getCookie("confirmed");
+if (cookie == "":) {
+  // ask em
+  var prompted = confirm("Are you sure you would like to post your IP address to Twitter? Remember: we are not responsible for if you post it. (this setting will save)");
+if (prompted == true) {
+  document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+} else {
+  break
+}
+} 
+else {
+  // let them make a mistake without confirmation
+  window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
+}
 }
 function doxopenemail() {
-window.location.href = "mailto:?body=Hello%2C%20friend%21%0AMy%20IP%20is%20"+ip+"%21%20Send%20me%20yours%20too%21%0Ahttps%3A%2F%2Fdoxmyself.cf&subject=My IP address!";
+var cookie = getCookie("confirmed");
+if (cookie == "":) {
+  // ask em
+  var prompted = confirm("Are you sure you would like to email your IP address to someone? Remember: we are not responsible for if you email it. (this setting will save)");
+if (prompted == true) {
+  document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+} else {
+  break
+}
+} 
+else {
+  // let them make a mistake without confirmation
+  window.location.href = "mailto:?body=Hello%2C%20friend%21%0AMy%20IP%20is%20"+ip+"%21%20Send%20me%20yours%20too%21%0Ahttps%3A%2F%2Fdoxmyself.cf&subject=My IP address!";
+}
 }
 function doxopenreddit() {
-window.open("https://www.reddit.com/submit?title=My IP address! via doxmyself.cf&text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F%20https%3A%2F%2Fdoxmyself.cf", "_blank");
+var cookie = getCookie("confirmed");
+if (cookie == "":) {
+  // ask em
+  var prompted = confirm("Are you sure you would like to post your IP address to Reddit? Remember: we are not responsible for if you post it. (this setting will save)");
+if (prompted == true) {
+  document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+} else {
+  break
+}
+} 
+else {
+  // let them make a mistake without confirmation
+  window.open("https://www.reddit.com/submit?title=My IP address! via doxmyself.cf&text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F%20https%3A%2F%2Fdoxmyself.cf", "_blank");
+}
 }
 </script>
 <style>
