@@ -80,10 +80,8 @@ else {
   
 function deletePref() {
   document.cookie = "confirmed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  alert("Cleared, reloading in 3 seconds..");
-  setTimeout(function(){
-    location.reload();
-  }, 3000);
+  alert("Cleared, press OK to reload");
+  location.reload();
 }
 </script>
 <style>
