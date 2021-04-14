@@ -37,7 +37,7 @@ $.getJSON('https://api.ipify.org/?format=json', function(data) {
 function doxopentwt() {
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  reload();
+  window.location.reload();
   setTimeout(function(){
   },5000);
 }
@@ -60,7 +60,7 @@ else {
 function doxopenemail() {
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  reload();
+  window.location.reload();
   setTimeout(function(){
   },5000);
 }
@@ -83,7 +83,7 @@ function doxopenreddit() {
 var cookie = getCookie("confirmed");
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  reload();
+  window.location.reload();
   setTimeout(function(){
   },5000);
 }
