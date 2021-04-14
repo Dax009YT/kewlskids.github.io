@@ -14,6 +14,7 @@
   gtag('config', 'G-Z0DNKB7ZMG');
 </script>
 <script type="text/javascript">
+var ip = 'placeholder';
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -34,12 +35,17 @@ $.getJSON('https://api.ipify.org/?format=json', function(data) {
   console.log(ip);
 });
 function doxopentwt() {
+if (ip == "placeholder") {
+  alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
+}
 var cookie = getCookie("confirmed");
 if (cookie == "") {
   // ask em
   var prompted = confirm("Are you sure you would like to post your IP address to Twitter? Remember: we are not responsible for if you post it. (this setting will save)");
   if (prompted == true) {
     document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+    // a mistake was made
+    window.open("https://twitter.com/intent/tweet?text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F&url=https%3A%2F%2Fdoxmyself.cf&hashtags=doxmyself,imadeamistake&via=Dax009YT", "_blank");
   } 
 }
 else {
@@ -49,12 +55,16 @@ else {
 }
 
 function doxopenemail() {
+if (ip == "placeholder") {
+  alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
+}
 var cookie = getCookie("confirmed");
 if (cookie == "") {
   // ask em
   var prompted = confirm("Are you sure you would like to post your IP address to Twitter? Remember: we are not responsible for if you post it. (this setting will save)");
   if (prompted == true) {
     document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+    window.location.href = "mailto:?body=Hello%2C%20friend%21%0AMy%20IP%20is%20"+ip+"%21%20Send%20me%20yours%20too%21%0Ahttps%3A%2F%2Fdoxmyself.cf&subject=My IP address!";
   } 
 }
 else {
@@ -65,11 +75,15 @@ else {
 
 function doxopenreddit() {
 var cookie = getCookie("confirmed");
+if (ip == "placeholder") {
+  alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
+}
 if (cookie == "") {
   // ask em
   var prompted = confirm("Are you sure you would like to post your IP address to Twitter? Remember: we are not responsible for if you post it. (this setting will save)");
   if (prompted == true) {
     document.cookie = "confirmed=true; expires=Thu, 31 Dec 2420 11:59:59 UTC; path=/";
+    window.open("https://www.reddit.com/submit?title=My IP address! via doxmyself.cf&text=My%20IP%20address%20is%20"+ip+"%2C%20what's%20yours%3F%20https%3A%2F%2Fdoxmyself.cf", "_blank");
   } 
 }
 else {
