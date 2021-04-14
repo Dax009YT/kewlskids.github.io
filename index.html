@@ -37,7 +37,8 @@ $.getJSON('https://api.ipify.org/?format=json', function(data) {
 function doxopentwt() {
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  break;
+  reload();
+  await new Promise(r => setTimeout(r, 5000));
 }
 var cookie = getCookie("confirmed");
 if (cookie == "") {
@@ -58,7 +59,8 @@ else {
 function doxopenemail() {
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  break;
+  reload();
+  await new Promise(r => setTimeout(r, 5000));
 }
 var cookie = getCookie("confirmed");
 if (cookie == "") {
@@ -79,7 +81,8 @@ function doxopenreddit() {
 var cookie = getCookie("confirmed");
 if (ip == "placeholder") {
   alert("Something is blocking your public IP from being found, please check if you have any adblockers lol");
-  break;
+  reload();
+  await new Promise(r => setTimeout(r, 5000));
 }
 if (cookie == "") {
   // ask em
